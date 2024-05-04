@@ -19,11 +19,10 @@ describe('valorProjeto', () => {
         ]
 
         const valorHora = 50
-        const valorProjeto = 1.5
 
-        const result = calcularValorTotalProjeto(funcionalidades, valorHora, valorProjeto)
-        //72 * 50 * 1.5
-        exp(result).toEqual()
+        const resultado = calcularValorTotalProjeto(funcionalidades, valorHora)
+        //calculo
+        expect(resultado).toEqual(3960)
         //const result = calcularValorTotalProjeto(funcionalidades)
         //expect(result).toEqual(8)
         //const resultado = calcularValorTotalProjeto(["ssr"], 8)
