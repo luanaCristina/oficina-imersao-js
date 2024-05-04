@@ -22,26 +22,11 @@ describe('valorProjeto', () => {
         const valorProjeto = 1.5
 
         const result = calcularValorTotalProjeto(funcionalidades, valorHora, valorProjeto)
-        //72 
+        //72 * 50 * 1.5
         exp(result).toEqual()
         //const result = calcularValorTotalProjeto(funcionalidades)
         //expect(result).toEqual(8)
         //const resultado = calcularValorTotalProjeto(["ssr"], 8)
         //console.log(resultado)
-    }),
-
-    
-    test("cenario2", ()=>{
-        //const funcionalidades = 
-        //const result = calcularValorTotalProjeto(funcionalidades)
-        //expect(result).toEqual(8)
-        const resultado = calcularValorTotalProjeto(["ssr"], 8)
-        console.log(resultado)
-    }),
-    //test("cenario2", ()=>{
-    //    const funcionalidades = 
-    //    const result = calcularValorTotalProjeto(funcionalidades)
-    //    expect(result).toEqual(8)
-
-    //})
-});
+    })
+})
