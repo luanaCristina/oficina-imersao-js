@@ -7,25 +7,31 @@ describe('valorProjeto', () => {
         modulePacote.calcularPacote.mockReturnValue('pacote_basico')
     })
 
-    test("cenario", ()=>{
-        const funcionalidades = [
-            "setup",
-      "responsividade",
-      "construcao_1_pagina",
-      "construcao_1_pagina",
-      "construcao_1_pagina",
-      "formulario",
-      "ssr",
-        ]
-
-        const valorHora = 50
-
-        const resultado = calcularValorTotalProjeto(funcionalidades, valorHora)
-        //calculo
-        expect(resultado).toEqual(3960)
+    test("cenario3", ()=>{
+        
         //const result = calcularValorTotalProjeto(funcionalidades)
-        //expect(result).toEqual(8)
-        //const resultado = calcularValorTotalProjeto(["ssr"], 8)
-        //console.log(resultado)
-    })
+        //expect(result).toEqual(8008)
+        const resultado = calcularValorTotalProjeto(["setup",
+        "responsividade",
+        "otimizacao_seo",
+        "integracao_mailchimp",
+        "construcao_1_pagina",
+        "formulario",
+        "ssr",
+        "integracao_api_propria"], 70)
+        expect(resultado).toEqual(8008)
+    });
+    // test("cenario1", ()=>{
+        
+    //     const resultado = calcularValorTotalProjeto(["setup",
+    //     "setup",
+    //   "responsividade",
+    //   "construcao_1_pagina",
+    //   "construcao_1_pagina",
+    //   "construcao_1_pagina",
+    //   "formulario",
+    //   "ssr",], 100)
+    //     expect(resultado).toEqual(8800)
+    // });
+
 })
