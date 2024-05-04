@@ -1,3 +1,4 @@
+
 const { calcularValorTotalProjeto } = require("../../dominio/calculadora/Projeto/valorProjeto");
 const modulePacote = require("../../dominio/calculadora/Projeto/pacote")
 jest.mock("../../dominio/calculadora/Projeto/pacote")//fake, falso, simulação, demonstração
@@ -7,11 +8,26 @@ describe('valorProjeto', () => {
     })
 
     test("cenario", ()=>{
-        //const funcionalidades = 
+        const funcionalidades = [
+            "setup",
+      "responsividade",
+      "construcao_1_pagina",
+      "construcao_1_pagina",
+      "construcao_1_pagina",
+      "formulario",
+      "ssr",
+        ]
+
+        const valorHora = 50
+        const valorProjeto = 1.5
+
+        const result = calcularValorTotalProjeto(funcionalidades, valorHora, valorProjeto)
+        //72 
+        exp(result).toEqual()
         //const result = calcularValorTotalProjeto(funcionalidades)
         //expect(result).toEqual(8)
-        const resultado = calcularValorTotalProjeto(["ssr"], 8)
-        console.log(resultado)
+        //const resultado = calcularValorTotalProjeto(["ssr"], 8)
+        //console.log(resultado)
     }),
 
     
